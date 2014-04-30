@@ -2,19 +2,45 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', [])  
+angular.module('dataCube.controllers', [])  
   .controller('CZRegionMap', ["$scope",function(scope) {
 
          
          
          scope.data=
-         {
-             title:"Titulek dat",             
-             data:[['CZ0100',1000],
-             ['CZ0202',2000],
-             ['CZ0201',3000],
-             ['CZ0643',4000]]
-         }   
+                    {
+                        title:"Titulek dat",             
+                        data:[
+                            {
+                                name:2009,
+                                data:[
+                                    {
+                                        tickValue:'http://linked.opendata.cz/resource/region/CZ0100',
+                                        y:1000
+                                    },
+                                    {
+                                        tickValue:'http://linked.opendata.cz/resource/region/CZ0202',
+                                        y:1200
+                                    }
+
+                                ]
+                            },
+                            {
+                                name:2010,
+                                data:[
+                                    {
+                                        tickValue:'http://linked.opendata.cz/resource/region/CZ0100',
+                                        y:1100
+                                    },
+                                    {
+                                        tickValue:'http://linked.opendata.cz/resource/region/CZ0202',
+                                        y:1300
+                                    }
+
+                                ]
+                            }
+                        ]
+                    }   
              
              
              
@@ -24,7 +50,7 @@ angular.module('myApp.controllers', [])
           
         scope.changeData=function(){            
             
-            scope.data.data[0][1]+=500;
+            scope.data.data[0].data[0].y+=500;
             
         }  
                 
