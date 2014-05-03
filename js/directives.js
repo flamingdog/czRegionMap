@@ -312,13 +312,15 @@ angular.module('dataCube.directives', [])
             function GetRange(array, index) {
                 var min = 9999999999;
                 var max = -9999999999;
-
+                var sum=0;
                 for (var i = 0; i < array.length; i++) {
-
+                    sum+=Number(array[i][index]);
                     min = Math.min(min, Number(array[i][index]));
                     max = Math.max(max, Number(array[i][index]));
                 }
-                return [min, max];
+                var avg=sum/array.length;
+                var mm=Math.min(avg-min,max-avg);
+                return [min,max, avg-mm, avg+mm];
             }
 
             function SetDataArray(list, range) {
@@ -357,7 +359,9 @@ angular.module('dataCube.directives', [])
 
                 if (range == null) {
                     range = r;
+                    range =[r[2],r[3]]
                 }
+                
                 for (var i = 0; i<mapping.length;i+=3){
                     SetRegionColor(mapping[i+2],"#555555");
                 }
