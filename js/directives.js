@@ -24,16 +24,16 @@ angular.module('dataCube.directives', [])
                 "Benešov", 53, "CZ0201",
                 "Brno-venkov", 74, "CZ0643",
                 "Bruntál", 3, "CZ0801",
-                "Bøeclav", 48, "CZ064",
+                "Břeclav", 48, "CZ064",
                 "České Budějovice", 36, "CZ0311",
                 "Cheb", 0, "CZ0411",
                 "Český Krumlov", 67, "CZ0312",
                 "Česká Lípa", 6, "CZ0511",
                 "Chrudim", 23, "CZ0531",
                 "Chomutov", 14, "CZ0422",
-                "Děšín", 18, "CZ0421",
+                "Děčín", 18, "CZ0421",
                 "Domažlice", 32, "CZ0321",
-                "Frýdek-Místek", 75, "CZ0802	",
+                "Frýdek-Místek", 75, "CZ0802",
                 "Havlíčkův Brod", 39, "CZ0631",
                 "Hradec Králové", 64, "CZ0521",
                 "Hodonín", 54, "CZ0645",
@@ -385,6 +385,9 @@ scope.$apply();
                 if (value == null) {
                     value = "";
 
+                }
+                if(value2==null){
+                    value2="";
                 }
                 try {
                     var el = element.find("path");

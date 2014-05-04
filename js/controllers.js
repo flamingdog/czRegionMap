@@ -15,7 +15,7 @@ angular.module('dataCube.controllers', [])
                                 name:2009,
                                 data:[
                                     {
-                                        tickValue:'http://linked.opendata.cz/resource/region/CZ0100',
+                                        tickValue:'http://linked.opendata.cz/resource/region/CZ064',
                                         y:1000
                                     },
                                     {
