@@ -275,7 +275,7 @@ angular.module('dataCube.directives', [])
                 angular.element(object).attr("stroke", "red");
                 angular.element(object).attr("stroke-width", "5px");
 
-                scope.ttLeft = e.pageX + 20;
+                scope.ttLeft = e.pageX + 20 - 435;
                 scope.ttTop = e.pageY + 20;
                 scope.ttShow = "block";
                 scope.$apply();
