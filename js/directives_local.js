@@ -101,7 +101,7 @@ angular.module('dataCube.directives', [])
             });
 
             element.find("path").on("mousemove", function (e) {
-                scope.ttLeft = e.pageX - 415;
+                scope.ttLeft = e.pageX + 20;// 415;
                 scope.ttTop = e.pageY + 20;
                 scope.ttShow = "block";
                 scope.$apply();
@@ -425,8 +425,8 @@ angular.module('dataCube.directives', [])
 
         return {
             restrict: 'E',
-            templateUrl: '/assets/javascripts/angular/datacube/partials/CZMap.html',
-            //templateUrl: 'partials/CZMap.html',
+            //templateUrl: '/assets/javascripts/angular/datacube/partials/CZMap.html',
+            templateUrl: 'partials/CZMap.html',
             link: link,
             scope: {data: "="}
         }
